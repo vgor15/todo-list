@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  }
+  25% {
+    background: linear-gradient(45deg, #ffdde1, #ee9ca7);
+  }
+  50% {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+  }
+  75% {
+    background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+  }
+  100% {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  }
+}
+
+.animate-bg-gradient {
+  position: absolute;
+  inset: 0;
+  animation: gradientAnimation 10s infinite ease-in-out alternate;
+  background-size: 300% 300%;
+  z-index: -1;
+  transition: background 0.5s linear;
+}
+

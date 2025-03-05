@@ -1,19 +1,25 @@
+/*************  ✨ Codeium Command 🌟  *************/
 @import "tailwindcss";
 @keyframes gradientAnimation {
   0% {
     background: linear-gradient(45deg, #ffd700, #ffa07a, #ff69b4, #ff33cc);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
   }
   25% {
     background: linear-gradient(45deg, #ff69b4, #ff33cc, #ffd700, #ffa07a);
+    background: linear-gradient(45deg, #ffdde1, #ee9ca7);
   }
   50% {
     background: linear-gradient(45deg, #ff33cc, #ffd700, #ffa07a, #ff69b4);
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
   }
   75% {
     background: linear-gradient(45deg, #ffa07a, #ff69b4, #ff33cc, #ffd700);
+    background: linear-gradient(45deg, #fad0c4, #ff9a9e);
   }
   100% {
     background: linear-gradient(45deg, #ffd700, #ffa07a, #ff69b4, #ff33cc);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
   }
 }
 
@@ -24,5 +30,7 @@
   background-size: 300% 300%;
   z-index: -1;
   transition: background 0.5s linear;
-  will-change: background;
 }
+
+
+/******  ea86886e-a7f9-47e5-be84-07a67a3c1106  *******/

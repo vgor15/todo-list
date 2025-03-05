@@ -1,3 +1,4 @@
+/*************  ✨ Codeium Command 🌟  *************/
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -72,11 +73,7 @@ const Page = () => {
                 className="bg-white p-4 rounded-lg shadow-md border border-gray-200 flex flex-col"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: index * 0.1,
-                }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: index * 0.1 }}
               >
                 <h3 className="font-semibold text-lg text-gray-900">
                   {task.title}
@@ -84,6 +81,7 @@ const Page = () => {
                 <p className="text-gray-600 mt-1">{task.description}</p>
                 <motion.button
                   className="mt-4 w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  className="mt-4 bg-red-500 px-4 py-2 rounded-md text-xl text-white cursor-pointer hover:bg-red-700 transition-all"
                   onClick={() => deleteTaskHandler(index)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -109,3 +107,6 @@ const Page = () => {
 };
 
 export default Page;
+
+
+/******  6bc17ed2-27db-4ba9-b442-f04c22399d62  *******/

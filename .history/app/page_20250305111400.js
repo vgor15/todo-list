@@ -16,29 +16,27 @@ const Page = () => {
   };
 
   const deleteTaskHandler = (index) => {
-    const newTasks = mainTasks.filter((_, i) => i !== index);
+    const newTasks = mainTasks.filter((task, i) => i !== index);
     setMainTasks(newTasks);
   };
 
   return (
     <motion.div
       className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden"
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
-      {/* Animated background */}
-      <div className="absolute inset-0 animate-bg-gradient"></div>
-
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient-flow"></div>
       <h1 className="text-5xl font-bold text-white mb-6 relative z-10">
         My Todo List
       </h1>
       <motion.form
         className="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-xl w-full max-w-lg relative z-10"
         onSubmit={submitHandler}
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <input
           className="border px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
@@ -57,8 +55,8 @@ const Page = () => {
         />
         <motion.button
           className="bg-indigo-600 px-4 py-2 rounded-md text-xl text-white cursor-pointer hover:bg-indigo-700 transition-all"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           Add Task
         </motion.button>
@@ -70,23 +68,19 @@ const Page = () => {
               <motion.div
                 key={index}
                 className="bg-white p-4 rounded-lg shadow-md border border-gray-200 flex flex-col"
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: index * 0.1,
-                }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <h3 className="font-semibold text-lg text-gray-900">
                   {task.title}
                 </h3>
                 <p className="text-gray-600 mt-1">{task.description}</p>
                 <motion.button
-                  className="mt-4 w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  className="mt-4 bg-red-500 px-4 py-2 rounded-md text-xl text-white cursor-pointer hover:bg-red-700 transition-all"
                   onClick={() => deleteTaskHandler(index)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
                   Delete Task
                 </motion.button>
@@ -98,7 +92,7 @@ const Page = () => {
             className="text-center text-white mt-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 1 }}
           >
             No tasks available
           </motion.p>

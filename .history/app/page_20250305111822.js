@@ -72,11 +72,7 @@ const Page = () => {
                 className="bg-white p-4 rounded-lg shadow-md border border-gray-200 flex flex-col"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: index * 0.1,
-                }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: index * 0.1 }}
               >
                 <h3 className="font-semibold text-lg text-gray-900">
                   {task.title}
@@ -109,3 +105,4 @@ const Page = () => {
 };
 
 export default Page;
+

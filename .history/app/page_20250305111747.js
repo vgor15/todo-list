@@ -1,6 +1,8 @@
+/*************  ✨ Codeium Command 🌟  *************/
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+// import "./styles.css"; // Import the CSS file for animations
 
 const Page = () => {
   const [title, setTitle] = useState("");
@@ -26,6 +28,9 @@ const Page = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       {/* Animated background */}
       <div className="absolute inset-0 animate-bg-gradient"></div>
@@ -39,6 +44,9 @@ const Page = () => {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <input
           className="border px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
@@ -59,6 +67,8 @@ const Page = () => {
           className="bg-indigo-600 px-4 py-2 rounded-md text-xl text-white cursor-pointer hover:bg-indigo-700 transition-all"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           Add Task
         </motion.button>
@@ -71,22 +81,22 @@ const Page = () => {
                 key={index}
                 className="bg-white p-4 rounded-lg shadow-md border border-gray-200 flex flex-col"
                 initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeInOut",
-                  delay: index * 0.1,
-                }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <h3 className="font-semibold text-lg text-gray-900">
                   {task.title}
                 </h3>
                 <p className="text-gray-600 mt-1">{task.description}</p>
                 <motion.button
-                  className="mt-4 w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  className="mt-4 bg-red-500 px-4 py-2 rounded-md text-xl text-white cursor-pointer hover:bg-red-700 transition-all"
                   onClick={() => deleteTaskHandler(index)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
                   Delete Task
                 </motion.button>
@@ -99,6 +109,7 @@ const Page = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 1 }}
           >
             No tasks available
           </motion.p>
@@ -109,3 +120,5 @@ const Page = () => {
 };
 
 export default Page;
+
+/******  888d75d2-af45-4861-866e-9c50f42bd526  *******/
