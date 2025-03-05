@@ -1,3 +1,4 @@
+/*************  ✨ Codeium Command 🌟  *************/
 "use client";
 import React, { useState } from "react";
 
@@ -9,9 +10,13 @@ const page = () => {
     <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       <h1 className="text-6xl font-bold text-center mb-4">My Todo List</h1>
       <form className="flex flex-col gap-4 bg-white p-6 rounded-lg shadow-lg">
+      <form className="flex flex-col gap-4">
         <input
           className="border-2 px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
+          className="border-2 px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
           type="text"
+          name=""
+          id=""
           placeholder="Add a Title..."
           autoComplete="off"
           value={title}
@@ -19,7 +24,10 @@ const page = () => {
         />
         <input
           className="border-2 px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-indigo-500 bg-white"
+          className="border-2 px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-indigo-500"
           type="text"
+          name=""
+          id=""
           placeholder="Add a Description..."
           autoComplete="off"
           value={description}
@@ -35,3 +43,4 @@ const page = () => {
 
 export default page;
 
+/******  cc4baf44-90af-4256-ab57-3e755e593321  *******/
