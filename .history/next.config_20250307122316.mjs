@@ -5,7 +5,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/todo-list", // Replace with your GitHub repo name
+  basePath: "/your-repo-name", // Replace with your GitHub repo name
   images: {
     unoptimized: true,
   },
